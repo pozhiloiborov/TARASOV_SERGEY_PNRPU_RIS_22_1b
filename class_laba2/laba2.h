@@ -9,17 +9,17 @@ class student
 	string group;
 	double sred;
 public:
-	//конструкторы с и без параметров
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ СЃ Рё Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 	student();
 	student(string, string, double);
-	//копирование и деструктор
+	//РєРѕРїРёСЂРѕРІР°РЅРёРµ Рё РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	student(const student&);
 	~student();
-	//селекторы
+	//СЃРµР»РµРєС‚РѕСЂС‹
 	string get_fio();
 	string get_group();
 	float get_sred();
-	//модификаторы
+	//РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
 	void set_fio(string);
 	void set_group(string);
 	void set_sred(double);

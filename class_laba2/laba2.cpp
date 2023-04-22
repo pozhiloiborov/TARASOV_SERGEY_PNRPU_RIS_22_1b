@@ -6,28 +6,28 @@ using namespace std;
 	
 student::student()
 {
-	cout << " Êîíñòğóêòîğ áåç ïàğàìåòğîâ " << endl;
+	cout << " ĞšĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ Ğ±ĞµĞ· Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ğ¾Ğ² " << endl;
 	fio = "";
 	group = "";
 	sred = 0;
 }
 student::student(string F, string G, double S)
 {
-	cout << " Êîíñòğóêòîğ ñ ïàğàìåòğàìè " << endl;
+	cout << " ĞšĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ Ñ Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ğ°Ğ¼Ğ¸ " << endl;
 	fio = F;
 	group = G;
 	sred = S;
 }
 student::student(const student& studentik)
 {
-	cout << " Êîíñòğóêòîğ êîïèğîâàíèÿ " << endl;
+	cout << " ĞšĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ ĞºĞ¾Ğ¿Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ " << endl;
 	fio = studentik.fio;
 	group = studentik.group;
 	sred = studentik.sred;
 }
 student::~student()
 {
-	cout << " Äåñòğóêòîğ " << endl;
+	cout << " Ğ”ĞµÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ " << endl;
 }
 string student::get_fio()
 {
@@ -55,7 +55,7 @@ void  student::set_sred(double sredd)
 }
 void  student::print()
 {
-	cout << "  ÔÈÎ - " << fio <<" ." << endl;
-	cout << "  ÃĞÓÏÏÀ - " << group << " ." << endl;
-	cout << "  ÑĞÅÄÍÈÉ ÁÀËË - " << sred << " ." << endl;
+	cout << "  Ğ¤Ğ˜Ğ - " << fio <<" ." << endl;
+	cout << "  Ğ“Ğ Ğ£ĞŸĞŸĞ - " << group << " ." << endl;
+	cout << "  Ğ¡Ğ Ğ•Ğ”ĞĞ˜Ğ™ Ğ‘ĞĞ›Ğ› - " << sred << " ." << endl;
 }

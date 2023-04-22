@@ -12,15 +12,15 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "Russian");
-	//конструктор без параметров
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 	cout << "student A\n";
 	student A;
 	A.print();
-	//конструктор с параметрами
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	cout << "student B\n";
-	student B("Владимир Владимирович Владимиров", " РИС-22-3б", 4.41);
+	student B("Р’Р»Р°РґРёРјРёСЂ Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡ Р’Р»Р°РґРёРјРёСЂРѕРІ", " Р РРЎ-22-3Р±", 4.41);
 	B.print();
-	//конструктор копирования
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	cout << "student C\n";
 	student C = B;
 	C.print();
@@ -35,11 +35,11 @@ student make_student()
 	string fio;
 	string group;
 	double sred;
-	cout << " Введите ФИО " << endl;
+	cout << " Р’РІРµРґРёС‚Рµ Р¤РРћ " << endl;
 	cin >> fio;
-	cout << " Введите группу " << endl;
+	cout << " Р’РІРµРґРёС‚Рµ РіСЂСѓРїРїСѓ " << endl;
 	cin >> group;
-	cout << " Введите cредний балл " << endl;
+	cout << " Р’РІРµРґРёС‚Рµ cСЂРµРґРЅРёР№ Р±Р°Р»Р» " << endl;
 	cin >> sred;
 	student studentik(fio, group, sred);
 	return studentik;

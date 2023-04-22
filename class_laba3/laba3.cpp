@@ -23,7 +23,7 @@ Time::Time(Time& time)
 }
 Time::~Time()
 {
-	/*cout << " Äåñòðóêòîð " << endl;*/
+	/*cout << " Æ’ÐµÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ " << endl;*/
 }
 void Time::set_mins(int x)
 {
@@ -43,7 +43,7 @@ int Time::get_secs()
 }
 Time& Time:: operator=(const Time& t )
 {
-	//ïðîâåðêà íà ñàìîïðèñâàèâàíèå
+	//Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° ÑÐ°Ð¼Ð¾Ð¿Ñ€Ð¸ÑÐ²Ð°Ð¸Ð²Ð°Ð½Ð¸Ðµ
 	if (&t == this) return *this;
 	mins = t.mins;
 	secs = t.secs;

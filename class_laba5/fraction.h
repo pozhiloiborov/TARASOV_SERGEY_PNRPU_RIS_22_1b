@@ -1,35 +1,35 @@
 #pragma once
 #include "Pair.h"
-//класс fraction наследуется от класса Pair
+//РєР»Р°СЃСЃ fraction РЅР°СЃР»РµРґСѓРµС‚СЃСЏ РѕС‚ РєР»Р°СЃСЃР° Pair
 class fraction :
 	public Pair
 {
 public:
-	void show();//функция для просмотра артибутов класса с помощью указателя
-	//конструктор без параметров
+	void show();//С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° Р°СЂС‚РёР±СѓС‚РѕРІ РєР»Р°СЃСЃР° СЃ РїРѕРјРѕС‰СЊСЋ СѓРєР°Р·Р°С‚РµР»СЏ
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 	fraction(void);
-	//деструктор
+	//РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	~fraction(void);
-	//конструктор с параметрами
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	fraction(int, int);
 	fraction(const fraction&);
-	//селекторы
+	//СЃРµР»РµРєС‚РѕСЂС‹
 	int get_firstpart();
 	int get_secondpart();
-	//модификаторы
+	//РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
 	void set_first(int);
 	void set_second(int);
-	//перегрузка приваивания
+	//РїРµСЂРµРіСЂСѓР·РєР° РїСЂРёРІР°РёРІР°РЅРёСЏ
 	fraction& operator=(const fraction&);
-	//перегрузка ввода-вывода
+	//РїРµСЂРµРіСЂСѓР·РєР° РІРІРѕРґР°-РІС‹РІРѕРґР°
 	friend ostream& operator<<(ostream& out, const fraction& t);
 	friend istream& operator>>(istream& in, fraction& t);
-	// полный набор методов сравнения
+	// РїРѕР»РЅС‹Р№ РЅР°Р±РѕСЂ РјРµС‚РѕРґРѕРІ СЃСЂР°РІРЅРµРЅРёСЏ
 	bool operator == (const fraction&);
 	bool operator>(const fraction&);
 	bool operator<(const fraction&);
 protected:
-	//целая и дробная часть
+	//С†РµР»Р°СЏ Рё РґСЂРѕР±РЅР°СЏ С‡Р°СЃС‚СЊ
 	int first_part;
 	int second_part;
 };

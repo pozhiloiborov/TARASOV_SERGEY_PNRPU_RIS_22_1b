@@ -1,30 +1,30 @@
 #include "fraction.h"
 #include  <iostream>
 using namespace std;
-//конструктор без параметров
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 fraction::fraction(void)
 {
 	first_part = 0;
 	second_part = 0;
 }
-//деструктор
+//РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 fraction::~fraction(void)
 {
 }
-//конструктор с параметрами
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 fraction::fraction(int first_part, int second_part) :Pair(first_part, second_part)
 {
 	this->first_part = first_part;
 	this->second_part = second_part;
 }
 
-//конструктор копировани¤
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёВ¤
 fraction::fraction(const fraction& t)
 {
 	first_part = t.first_part;
 	second_part = t.second_part;
 }
-//селекторы
+//СЃРµР»РµРєС‚РѕСЂС‹
 int fraction::get_firstpart()
 {
 	return first_part;
@@ -33,7 +33,7 @@ int fraction::get_secondpart()
 {
 	return  second_part;
 }
-//модификаторы
+//РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
 void fraction::set_first(int  ffirst)
 {
 	first_part = ffirst;
@@ -42,7 +42,7 @@ void fraction::set_second(int ssecond)
 {
 	second_part = ssecond;
 }
-//перегрузка присваивани¤
+//РїРµСЂРµРіСЂСѓР·РєР° РїСЂРёСЃРІР°РёРІР°РЅРёВ¤
 fraction& fraction::operator=(const fraction& t)
 {
 	if (this == &t) return *this;
@@ -50,21 +50,21 @@ fraction& fraction::operator=(const fraction& t)
 	second_part = t.second_part;
 	return *this;
 }
-//перегрузка ввода-вывода
+//РїРµСЂРµРіСЂСѓР·РєР° РІРІРѕРґР°-РІС‹РІРѕРґР°
 ostream& operator<<(ostream& out, const fraction& t)
 {
-	out << "\nцелая часть числа = " << t.first_part;
-	out << "\nдробная часть числа = " << t.second_part;
+	out << "\nС†РµР»Р°СЏ С‡Р°СЃС‚СЊ С‡РёСЃР»Р° = " << t.first_part;
+	out << "\nРґСЂРѕР±РЅР°СЏ С‡Р°СЃС‚СЊ С‡РёСЃР»Р° = " << t.second_part;
 	out << "\n";
 	return out;
 }
 istream& operator>>(istream& in, fraction& t)
 {
-	cout << "введите целую часть числа "; in >> t.first_part;
-	cout << "введите дробную часть числа "; in >> t.second_part;
+	cout << "РІРІРµРґРёС‚Рµ С†РµР»СѓСЋ С‡Р°СЃС‚СЊ С‡РёСЃР»Р° "; in >> t.first_part;
+	cout << "РІРІРµРґРёС‚Рµ РґСЂРѕР±РЅСѓСЋ С‡Р°СЃС‚СЊ С‡РёСЃР»Р° "; in >> t.second_part;
 	return in;
 }
-// полный набор методов сравнени¤
+// РїРѕР»РЅС‹Р№ РЅР°Р±РѕСЂ РјРµС‚РѕРґРѕРІ СЃСЂР°РІРЅРµРЅРёВ¤
 bool fraction::operator == (const fraction& t)
 {
 	double value1 = first_part / second_part;
@@ -85,6 +85,6 @@ bool  fraction::operator<(const fraction& t)
 }
 void  fraction::show()
 {
-	cout << "целая часть " << first_part << endl;
-	cout << "дробная часть " << second_part << endl;
+	cout << "С†РµР»Р°СЏ С‡Р°СЃС‚СЊ " << first_part << endl;
+	cout << "РґСЂРѕР±РЅР°СЏ С‡Р°СЃС‚СЊ " << second_part << endl;
 }

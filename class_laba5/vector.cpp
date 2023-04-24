@@ -17,7 +17,7 @@ vector::vector(void)
 	size = 0;
 	cur = 0;
 }
-void vector::Add(object*p)//добавление элемента в вектор
+void vector::Add(object*p)//РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РІРµРєС‚РѕСЂ
 {
 	if (cur < size)
 	{
@@ -27,11 +27,11 @@ void vector::Add(object*p)//добавление элемента в вектор
 }
 ostream& operator<<(ostream& out, const vector& v)
 {
-	if (v.size == 0) out << "Пустой " << endl;
-	object** p = v.beg;//указатель типа object
+	if (v.size == 0) out << "РџСѓСЃС‚РѕР№ " << endl;
+	object** p = v.beg;//СѓРєР°Р·Р°С‚РµР»СЊ С‚РёРїР° object
 	for (int i = 0; i < v.cur;i++)
 	{
-		cout << i + 1 << " элемент" << endl;
+		cout << i + 1 << " СЌР»РµРјРµРЅС‚" << endl;
 		(*p)->show();
 		p++;
 		cout << endl;
@@ -40,6 +40,6 @@ ostream& operator<<(ostream& out, const vector& v)
 }
 void vector::show()
 {
-	cout << "Размер " << size << endl;
-	cout << "индекс текущего элемента " << cur << endl;
+	cout << "Р Р°Р·РјРµСЂ " << size << endl;
+	cout << "РёРЅРґРµРєСЃ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° " << cur << endl;
 }

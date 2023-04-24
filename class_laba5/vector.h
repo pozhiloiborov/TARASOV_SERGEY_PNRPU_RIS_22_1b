@@ -11,7 +11,7 @@ public:
 	~vector(void);
 	vector(int);
 	vector(void);
-	void Add(object*);//добавление элемента в вектор
+	void Add(object*);//РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РІРµРєС‚РѕСЂ
 	friend ostream& operator<<(ostream& out, const vector& v);
 private:
 	object** beg;

@@ -1,4 +1,4 @@
-#include "Pair.h"\
+#include "Pair.h"
 #include <iostream>
 using namespace std;
 
@@ -7,24 +7,24 @@ Pair::Pair(void)
 	first = 0;
 	second = 0;
 }
-//деструктор
+//РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 Pair::~Pair(void)
 {
 }
-//конструктор с параметрами
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 Pair::Pair(int ffirst, int ssecond)
 {
 
 	first = ffirst;
 	second = ssecond;
 }
-//конструктор копировани¤
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёВ¤
 Pair::Pair(const Pair& t)
 {
 	first = t.first;
 	second = t.second;
 }
-//селекторы
+//СЃРµР»РµРєС‚РѕСЂС‹
 int Pair::get_first()
 {
 	return first;
@@ -33,7 +33,7 @@ int Pair::get_second()
 {
 	return second;
 }
-//модификаторы
+//РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
 void Pair::set_first(int ffirst)
 {
 	first = ffirst;
@@ -42,7 +42,7 @@ void Pair::set_second(int ssecond)
 {
 	second = ssecond;
 }
-//перегрузка приваивани¤
+//РїРµСЂРµРіСЂСѓР·РєР° РїСЂРёРІР°РёРІР°РЅРёВ¤
 Pair& Pair::operator=(const Pair& t)
 {
 	if (this == &t) return *this;
@@ -50,21 +50,21 @@ Pair& Pair::operator=(const Pair& t)
 	second = t.second;
 	return *this;
 }
-//перегрузка ввода-вывода
+//РїРµСЂРµРіСЂСѓР·РєР° РІРІРѕРґР°-РІС‹РІРѕРґР°
 ostream& operator<<(ostream& out, const Pair& t)
 {
-	out << "\nпервое число в паре = " << t.first;
-	out << "\nвторое число в паре = " << t.second;
+	out << "\nРїРµСЂРІРѕРµ С‡РёСЃР»Рѕ РІ РїР°СЂРµ = " << t.first;
+	out << "\nРІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ РІ РїР°СЂРµ = " << t.second;
 	out << "\n";
 	return out;
 }
 istream& operator>>(istream& in, Pair& t)
 {
-	cout << " введите первое число в паре "; in >> t.first;
-	cout << " введите второе число в паре "; in >> t.second;
+	cout << " РІРІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ РІ РїР°СЂРµ "; in >> t.first;
+	cout << " РІРІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ РІ РїР°СЂРµ "; in >> t.second;
 	return in;
 }
-//методы сравнени¤ пар из варианта
+//РјРµС‚РѕРґС‹ СЃСЂР°РІРЅРµРЅРёВ¤ РїР°СЂ РёР· РІР°СЂРёР°РЅС‚Р°
 bool Pair::operator>(const Pair& t)
 {
 	return (first > t.first) || (first == t.first) && second > t.second;
@@ -79,6 +79,6 @@ bool Pair::operator==(const Pair& t)
 }
 void Pair::show()
 {
-	cout << "первое число " << first <<endl;
-	cout << "второе число " << second<< endl;
+	cout << "РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ " << first <<endl;
+	cout << "РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ " << second<< endl;
 }

@@ -1,2 +1,5 @@
 ﻿  laba6_main.cpp
+  vector.cpp
+  Создание кода...
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba6\vector.cpp(50): warning C4715: vector::operator[]: значение возвращается не при всех путях выполнения
   class_laba6.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba6\x64\Debug\class_laba6.exe

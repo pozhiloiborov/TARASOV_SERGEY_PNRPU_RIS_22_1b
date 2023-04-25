@@ -1,2 +1,5 @@
 ﻿  lab2_main.cpp
-  laba2.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\laba2\x64\Debug\laba2.exe
+  laba2.cpp
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba2\laba2.cpp(42,9): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  Создание кода...
+  laba2.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba2\x64\Debug\laba2.exe

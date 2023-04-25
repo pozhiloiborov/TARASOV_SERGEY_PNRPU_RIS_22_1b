@@ -1,4 +1,5 @@
 #include <iostream>
+#include "windows.h"
 using namespace std;
 struct Node {
 	int data;
@@ -22,6 +23,8 @@ void clear_list(List& list);
 int main()
 {
 	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	List list;
 	list.head = NULL;
 	list.tail = NULL;

@@ -1,3 +1,3 @@
 ﻿  hash.cpp
-C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\hash1\hash.cpp(179,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\hash1\hash.cpp(305,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   hash1.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\hash1\x64\Debug\hash1.exe

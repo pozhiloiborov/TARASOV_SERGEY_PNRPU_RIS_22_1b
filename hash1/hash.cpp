@@ -3,6 +3,7 @@
 #include<ctime>
 #include<fstream>
 #include<windows.h>
+#include <vector>
 using namespace std;
 string names[5] = { "Андрей","Сергей","Алексей","Александр","Владимир" };
 string surnames[5] = { "Андреев","Сергеев","Алексеев","Александров","Владимиров" };
@@ -19,6 +20,10 @@ struct Human {
     string tele;
     string passport;
 
+};
+struct Node {
+    Human data;
+    Node* next = nullptr;
 };
 unsigned int HASH(const string key, int table_size)
 {
@@ -42,7 +47,7 @@ string gettele() {
 string getpassport() {
     return (passports[getnumber()]);
 }
-Human createstudent() {
+Human createhuman() {
     Human tmp;
     tmp.fio = getfio();
     tmp.tele = gettele();
@@ -62,7 +67,7 @@ void printarray(Human* array, int size) {
 }
 void fillarray(Human* array, int count) {
     for (int i = 0;i < count;i++) {
-        array[i] = createstudent();
+        array[i] = createhuman();
     }
 }
 struct hashtable {
@@ -168,10 +173,131 @@ struct hashtable {
         fi.close();
     }
 };
+struct hashtable_chain {
+    vector<Node*> array;
+    int collisioncount = 0;
+    hashtable_chain(int size) {
+        array.resize(size);
+    }
+    ~hashtable_chain() {
+        for (auto node : array) {
+            while (node != nullptr) {
+                Node* temp = node;
+                node = node->next;
+                delete temp;
+            }
+        }
+    }
+    void add(Human temp, int size) {
+        int i = HASH(temp.tele, size);
+        Node* node = new Node();
+        node->data = temp;
+        if (array[i] == nullptr) {
+            array[i] = node;
+        }
+        else {
+            collisioncount++;
+            Node* current = array[i];
+            while (current->next != nullptr) {
+                current = current->next;
+                collisioncount++;
+            }
+            current->next = node;
+        }
+    }
+    void findindex(string temp, int size) {
+        int hash = HASH(temp, size);
+        Node* current = array[hash];
+        int index = hash;
+        while (current != nullptr && current->data.tele != temp) {
+            current = current->next;
+            index++;
+        }
+        if (current != nullptr) {
+            cout << "Человек с номером телефона " << temp << " содержится по индексу " << index << endl;
+        }
+        else {
+            cout << "Человек с номером телефона " << temp << " не найден" << endl;
+        }
+    }
+    void pop(string temp, int size) {
+        int index = HASH(temp, size);
+        Node* current = array[index];
+        Node* prev = nullptr;
+        while (current != nullptr && current->data.tele != temp) {
+            prev = current;
+            current = current->next;
+        }
+        if (current != nullptr) {
+            if (prev != nullptr) {
+                prev->next = current->next;
+            }
+            else {
+                array[index] = current->next;
+            }
+            delete current;
+        }
+    }
+    void infile(vector<Node*>& array, int size) {
+        ofstream fo("file.txt");
+        for (int i = 0; i < size; i++) {
+            Node* current = array[i];
+            while (current != nullptr) {
+                fo << current->data.fio << endl;
+                fo << current->data.tele << endl;
+                fo << current->data.passport << endl;
+                current = current->next;
+            }
+        }
+        fo.close();
+    }
+    void outfile(vector<Node*>& array, int size) {
+        ifstream fi("file.txt");
+        for (int i = 0; i < size; i++) {
+            string fio, tele, passport;
+            getline(fi, fio);
+            getline(fi, tele);
+            getline(fi, passport);
+            Human temp;
+            temp.fio = fio;
+            temp.tele = tele;
+            temp.passport = passport;
+            int index = HASH(tele, size);
+            Node* node = new Node();
+            node->data = temp;
+            if (array[index] == nullptr) {
+                array[index] = node;
+            }
+            else {
+                Node* current = array[index];
+                while (current->next != nullptr) {
+                    current = current->next;
+                }
+                current->next = node;
+            }
+        }
+        fi.close();
+    }
+};
 void showhash(hashtable* newhash, int size) {
     for (int i = 0;i < size;i++) {
         showinfo(newhash->array[i]);
         cout << endl;
+    }
+}
+void showhashtable(hashtable_chain* newhash, int size) {
+    int j = 0;
+    for (int i = 0; i < size; i++) {
+        Node* current = newhash->array[i];
+        while (current != nullptr) {
+            j++;
+            cout << " Номер - " << j << endl;
+            cout << "ФИО:" << current->data.fio << endl;
+            cout << "Номер телефона:" << current->data.tele << endl;
+            cout << "Паспорт:" << current->data.passport << endl;
+            current = current->next;
+            cout << endl;
+        }
     }
 }
 int main()
@@ -186,11 +312,13 @@ int main()
     cout << endl;
     Human* array = new Human[size];
     hashtable newtable(size);
+    hashtable_chain newtable2(size);
     fillarray(array, size);
     printarray(array, size);
     cout << "=======================================================" << endl;
     for (int j = 0;j < size;j++) {
         newtable.add(array[j], size);
+        newtable2.add(array[j], size);
     }
     showhash(&newtable, size);
     newtable.findindex("88005553535", size);
@@ -198,6 +326,16 @@ int main()
     newtable.pop("88005553535", size);
     cout << "=======================================================" << endl;
     showhash(&newtable, size);
-    cout << "Количество коллизий на " << size << " элементов - " << newtable.collisioncount;
+    cout << "Количество коллизий на " << size << " элементов - " << newtable.collisioncount << endl;
+    cout << "Это был метод открытой адресации, сейчас будет метод цепочек " << endl;
+    system("pause");
+    system("cls");
+    showhashtable(&newtable2, size);
+    newtable2.findindex("88005553535", size);
+    system("pause");
+    newtable2.pop("88005553535", size);
+    cout << "=======================================================" << endl;
+    showhashtable(&newtable2, size);
+    cout << "Количество коллизий на " << size << " элементов - " << newtable2.collisioncount << endl;
     delete[] array;
 }

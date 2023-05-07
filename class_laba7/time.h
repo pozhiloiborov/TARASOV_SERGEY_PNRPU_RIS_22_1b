@@ -8,7 +8,7 @@ public:
 	Time(int, int); 
 	Time(const Time&);
 	Time& operator=(const Time&);
-	//перегруженные операции ввода-вывода
+	//РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё РІРІРѕРґР°-РІС‹РІРѕРґР°
 	friend ostream& operator<< (ostream& out, const Time&); 
 	friend istream& operator>> (istream& in, Time&);
 public:

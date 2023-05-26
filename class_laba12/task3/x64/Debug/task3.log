@@ -1,0 +1,14 @@
+﻿  Source.cpp
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\Source.cpp(13,9): warning C4101: n: неиспользованная локальная переменная
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\vvector.h(39,14): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\vvector.h(33,1): message : во время компиляции функции-члена класс шаблон "Vector<Time>::Vector(int)"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\Source.cpp(11,18): message : см. первую ссылку на "Vector<Time>::Vector" в "main"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\Source.cpp(11,28): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Vector<Time>"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\vvector.h(79,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\vvector.h(73,1): message : во время компиляции функции-члена класс шаблон "T Vector<T>::sred(void)"
+          with
+          [
+              T=Time
+          ]
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\Source.cpp(27,23): message : см. первую ссылку на "Vector<Time>::sred" в "main"
+  task3.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba12\task3\x64\Debug\task3.exe

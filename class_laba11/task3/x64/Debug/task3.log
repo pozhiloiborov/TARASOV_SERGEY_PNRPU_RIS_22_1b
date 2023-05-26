@@ -1,0 +1,18 @@
+﻿  task3.cpp
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\task3.cpp(26,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\vector.h(39,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\vector.h(33,1): message : во время компиляции функции-члена класс шаблон "Vector<Time>::Vector(int)"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\task3.cpp(27,14): message : выполняется компиляция ссылки на экземпляр шаблон функции "Vector<Time>::Vector(int)"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\task3.cpp(27,18): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Vector<Time>"
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\vector.h(79,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\vector.h(73,1): message : во время компиляции функции-члена класс шаблон "T Vector<T>::sred(void)"
+          with
+          [
+              T=Time
+          ]
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\task3.cpp(39,10): message : выполняется компиляция ссылки на экземпляр шаблон функции "T Vector<T>::sred(void)"
+          with
+          [
+              T=Time
+          ]
+  task3.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task3\x64\Debug\task3.exe

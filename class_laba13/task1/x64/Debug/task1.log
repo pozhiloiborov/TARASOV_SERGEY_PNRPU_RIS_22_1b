@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba13\task1\Source.cpp(32,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba13\task1\Source.cpp(40,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  task1.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba13\task1\x64\Debug\task1.exe

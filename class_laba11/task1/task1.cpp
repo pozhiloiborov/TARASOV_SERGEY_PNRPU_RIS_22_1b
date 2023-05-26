@@ -108,6 +108,7 @@ void main()
 	print_vector(v);
 	//4
 	int mini = min(v);
+
 	cout << mini << endl;
 	v = del(v, mini);
 	print_vector(v);

@@ -1,5 +1,5 @@
 ﻿  task4.cpp
-C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(77,18): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(91,18): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(107,18): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(76,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(90,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\task4.cpp(106,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   task4.vcxproj -> C:\Users\serge\OneDrive\Документы\GitHub\Tarasov_Sergey_LABS_PSTU_RIS_22_1b\class_laba11\task4\x64\Debug\task4.exe
